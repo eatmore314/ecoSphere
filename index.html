@@ -30,6 +30,24 @@
             <h3><a href="#contact">Contact</a></h3>
         </div>
     </nav>
+
+    <img src="./images/energy-removebg-preview.png" alt="Energy Conservation" class="ecoIcon ecoEnergy">
+    <img src="./images/water-removebg-preview.png" alt="Water Conservation" class="ecoIcon ecoWater">
+    <img src="./images/recycle-removebg-preview.png" alt="Recycling" class="ecoIcon ecoRecycle">
+    <!--API Section-->
+    <div class="ecoContainer">
+        <h1 id="ecoPact">⚡ Eco Impact Checker</h1>
+        <p>Check the Impact of your Carbon footprint!</p>
+        <div class="container">
+            <label for="electricity">Your Daily Electricity Usage (kWh):</label>
+            <input type="number" id="electricity" placeholder="Enter kWh">
+            <button class="trackerButton" onclick="calculateImpact()">Check Impact</button>
+            <p id="result">🌍 CO₂ Emissions: --</p>
+            <p id="howTo">Enter your daily electricity usage (in kWh) to see how much CO₂ you produce.
+                Try reducing your usage to lower your carbon footprint! 🌱</p>
+        </div>
+    </div>
+    <!--API Section-->
     <section id="about" class="about">
         <h1>🌱 About Us (EcoSphere)</h1>
         <h2>Making Energy Use Transparent & Sustainable
@@ -85,18 +103,6 @@
             waste, and choosing renewable energy, you can help build a sustainable future. 🌱💡</p>
     </section>
 
-    <!--API Section-->
-    <h1 id="ecoPact">⚡ Eco Impact Checker</h1>
-    <p>Check the Impact of your Carbon footprint!</p>
-    <div class="container">
-        <label for="electricity">Your Daily Electricity Usage (kWh):</label>
-        <input type="number" id="electricity" placeholder="Enter kWh">
-        <button class="trackerButton" onclick="calculateImpact()">Check Impact</button>
-        <p id="result">🌍 CO₂ Emissions: --</p>
-        <p id="howTo">Enter your daily electricity usage (in kWh) to see how much CO₂ you produce.
-            Try reducing your usage to lower your carbon footprint! 🌱</p>
-    </div>
-    <!--API Section-->
 
     <!--Footet Sect-->
     <footer id="contact">

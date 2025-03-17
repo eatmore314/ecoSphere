@@ -16,18 +16,68 @@ body {
     text-align: center;
 }
 
+
+.ecoIcon {
+    width: 125px;
+    position: absolute;
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.ecoEnergy {
+    top: 140px;
+    left: 38%;
+}
+
+.ecoWater {
+    top: 150px;
+    left: 45%;
+}
+
+.ecoRecycle {
+    top: 148px;
+    left: 52%;
+}
+
+
+.ecoIcon:hover {
+    transform: scale(1.15);
+}
+
 .about {
-    color: white;
-    width: 1000px;
-    margin: 0 auto;
-    padding-bottom: 80px;
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    margin: 50px auto;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.65), rgba(67, 160, 71, 0.55));
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .itMatters {
-    color: white;
-    width: 1000px;
-    margin: 0 auto;
-    padding-bottom: 40px;
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    margin: 50px auto;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.65), rgba(67, 160, 71, 0.55));
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .itMatters ul {
@@ -106,6 +156,19 @@ nav {
     color: white;
 }
 
+.ecoContainer {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    margin: 50px auto;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.65), rgba(67, 160, 71, 0.55));
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 /* ecoPal Container */
 .ecoPal {
     position: fixed;
@@ -118,6 +181,10 @@ nav {
     display: none;
     flex-direction: column;
     overflow: hidden;
+}
+
+.ecoContainer {
+    padding-bottom: 30px;
 }
 
 /* Chat Header */
@@ -174,7 +241,7 @@ nav {
     border-radius: 5px;
 }
 
-/* Chatbot Messages */
+/* Chatbot Msgs */
 .chat-message {
     display: flex;
     align-items: center;
@@ -214,7 +281,8 @@ nav {
     margin-right: 10px;
 }
 
-/* Open Chat Button */
+
+/* Open chat Btn */
 #openChat {
     position: fixed;
     bottom: 20px;
@@ -229,15 +297,246 @@ nav {
 }
 
 footer {
-    background: #3a7d44;
-    color: white;
+    margin-top: 40px;
+    border-radius: 12px 12px 0 0;
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.65), rgba(67, 160, 71, 0.55));
+    padding: 20px;
     text-align: center;
-    padding: 15px;
-    font-size: 14px;
 }
 
 footer p {
     margin: 5px 0;
     opacity: 0.9;
 
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 768px) {
+    .nav__list {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .nav__logo {
+        width: 140px;
+    }
+
+    .ecoIcon {
+        width: 100px;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    section {
+        padding: 40px 15px;
+        margin-top: 100px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ecoPal {
+        width: 90%;
+        bottom: 10px;
+        right: 5px;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 12px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav__logo {
+        width: 120px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    section {
+        width: 95%;
+        max-width: 500px;
+        padding: 20px;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ecoPal {
+        width: 95%;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .ecoIcon {
+        width: 90px;
+        display: inline-block;
+        margin: 10px;
+    }
+
+
+    footer {
+        text-align: center;
+        font-size: 12px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav__list {
+        gap: 10px;
+    }
+
+    .nav__list a {
+        font-size: 14px;
+    }
+
+    .ecoIcon {
+        width: 80px;
+        display: inline-block;
+        margin: 10px;
+    }
+
+
+    section {
+        padding: 30px 10px;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .nav__logo {
+        width: 100px;
+    }
+
+    .nav__list {
+        gap: 5px;
+    }
+
+    .nav__list a {
+        font-size: 12px;
+    }
+
+    .ecoIcon {
+        width: 60px;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .ecoEnergy {
+        top: 90px;
+        left: 25%;
+    }
+
+    .ecoWater {
+        top: 100px;
+        left: 50%;
+    }
+
+    .ecoRecycle {
+        top: 95px;
+        left: 75%;
+    }
+
+    section {
+        padding: 25px 10px;
+        font-size: 12px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .trackerButton {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 9px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

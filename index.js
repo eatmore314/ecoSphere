@@ -66,14 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Basic ecoPal responses w/ voice
     function getBotResponse(message) {
-        if (message.includes("recycle")) {
+        const lowerCaseMessage = message.toLowerCase(); // Convert input to lowercase
+
+        if (lowerCaseMessage.includes("recycle")) {
             ecoRecycleReply.play();
             return "♻️ Try sorting your waste into recyclables and non-recyclables!";
-        } else if (message.includes("energy")) {
+        } else if (lowerCaseMessage.includes("energy")) {
             ecoEnergyReply.play();
             return "⚡ Save energy by turning off unused lights and appliances!";
-
-        } else if (message.includes("water")) {
+        } else if (lowerCaseMessage.includes("water")) {
             ecoWaterReply.play();
             return "💧 Save water by turning off the tap while brushing your teeth!";
         } else {
